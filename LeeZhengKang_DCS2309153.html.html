@@ -15,39 +15,40 @@
             <th width=10%>No.</th>
             <th>Name</th>
             <th width = 20%>level</th>
-            <th>Players kill</th>
+            <th> kills</th>
             <th>Last seen online</th>
         </tr>
         <tbody id="PlayersTable"></tbody>
     </table>
     <script>
         fetch('Leezhengkang_DCS2309153.xml') 
-            .then(response => response.text())
-            .then(data => {
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(data, 'text/xml');
-                const Players = xmlDoc.getElementsByTagName('Player');
-                const table = document.getElementById('PlayersTable');
-                for (let i = 0; i < Players.length; i++) {
-                    const Player = Players[i];   
-                    const name = Player.getElementsByTagName('name')[0].textContent;
-                    const level = Player.getElementsByTagName('level')[0].textContent;
-                    const Players_kill = Player.getElementsByTagName('Players kill')[0].textContent;
-                    const Last_seen_online = Player.getElementsByTagName('Last seen online')[0].textContent;
-                    const row = table.insertRow(i);
-                    const numberCell = row.insertCell(0);
-                    const nameCell = row.insertCell(1);
-                    const levelCell = row.insertCell(2);
-                    const Players_killCell = row.insertCell(3);
-                    const Last_seenCell= row.insertCell(4);
-                    numberCell.innerHTML = i + 1;
-                    nameCell.innerHTML = name;
-                    levelCell.innerHTML = level;
-                    Players_killCell.innerHTML = Player_kill;
-                    Last_seen_onlineCell.innerHTML=Last_seen_online;
-                }
-            })
-            .catch(error => console.error(error));
+    .then(response => response.text())
+    .then(data => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, 'text/xml');
+        const Players = xmlDoc.getElementsByTagName('Player');
+        const table = document.getElementById('PlayersTable');
+        for (let i = 0; i < Players.length; i++) {
+            const Player = Players[i];
+            const name = Player.getElementsByTagName('name')[0].textContent;
+            const level = Player.getElementsByTagName('level')[0].textContent;
+            const kills = Player.getElementsByTagName('kills')[0].textContent;
+            const Last_seen_online = Player.getElementsByTagName('last_seen_online')[0].textContent;
+            const row = table.insertRow(i);
+            const numberCell = row.insertCell(0);
+            const nameCell = row.insertCell(1);
+            const levelCell = row.insertCell(2);
+            const killsCell = row.insertCell(3);
+            const Last_seen_onlineCell = row.insertCell(4);
+            numberCell.innerHTML = i + 1;
+            nameCell.innerHTML = name;
+            levelCell.innerHTML = level;
+            killsCell.innerHTML = kills; // Corrected variable name
+            Last_seen_onlineCell.innerHTML = Last_seen_online; // Corrected variable name
+        }
+    })
+    .catch(error => console.error(error));
+
     </script>
 </body>
 </html>
