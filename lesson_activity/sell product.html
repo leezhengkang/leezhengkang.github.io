@@ -1,0 +1,153 @@
+<html>
+<head>
+    <title>ABIBAS</title>
+    <link rel="icon" href="/1483042503-es-161229-adidas-4.jpg" type="image/jpg">
+    <link rel="stylesheet" href="sell product style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        .cart-btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body topmargin="20" leftmargin="50">
+   
+        
+    <h1 align="center"> ABIBAS</h1>
+    <div class="shoes-table">
+    <table  border="0" width="100%">
+       
+    <th align="left"><a href="form.html"target="_blank"> Log in</a></th>
+    
+    <th align="right"><a href="mailto:zhengkang688@gmail.com">Contact Us</a></th>
+    </table></div>
+     
+
+    <table border="0" width="25%" align="center">
+        <tr>
+            <td align="center"><a href="men shoes.html"target="_self"> Men</a></td>
+            <td align="center"><a href="women shoes.html"target="_self">Women</a></td>
+            <td align="center"><a href="kid shoes.html"target="_self">Kid</a></td>
+            
+        </tr>
+    
+    </table></div>
+
+    
+   
+        <div class="heading">
+        <h3>Best seller </h3>   
+    </div>
+    <section>
+    <div class="best seller" data-id="1" data-name="BAPE_x_adidas_Stan_Smith_Shoes_Black_IG1116_01_standard"data-price="74.00">
+
+        <img src="/BAPE_x_adidas_Stan_Smith_Shoes_Black_IG1116_01_standard.avif" height="250px" >
+        <p>Bape X Abibas Stan Smith Shoes<br><br>
+        RM74.00</p>
+        <button class="cart-btn" onclick="addToCart(1)">Buy now</button>
+
+    </div>
+
+    <div class="best seller" data-id="2" data-name="X_PLRBOOST_Shoes_Blue_ID9574_01_standard"data-price="79.00">
+
+        <img src="/X_PLRBOOST_Shoes_Blue_ID9574_01_standard.avif" height="250px">
+        <p>X_PLRBOOST Shoes<br><br>
+        RM79.00</p>
+        <button class="cart-btn" onclick="addToCart(2)">Buy now</button>
+
+    </div>
+
+    <div class="best seller" data-id="3" data-name="AlphaEdge_Shoes_Black_IF7292_01_standard"data-price="56.00">
+
+        <img src="/AlphaEdge_Shoes_Black_IF7292_01_standard.avif" height="250px">
+        <p>AlphaEdge Shoed<br><br>
+        RM56.00</p>
+        <button class="cart-btn" onclick="addToCart(3)">Buy now</button>
+
+    </div>
+
+    <div class="best seller" data-id="4" data-name="stan-smith-shoes"data-price="49.00">
+
+        <img src="/stan-smith-shoes.avif" height="250px">
+        <p>Stan Smith Shoes<br><br>
+        RM49.00</p>
+        <button class="cart-btn" onclick="addToCart(4)">Buy now</button>
+    </div>
+
+    <div class="best seller" data-id="5" data-name="BLONDEY_CONTINENTAL_Black_IG5574_01_standard"data-price="50.00">
+        <img src="/BLONDEY_CONTINENTAL_Black_IG5574_01_standard.avif" height="250px">
+        <p>Blodney Continental<br><br>
+        RM50.00</p>
+        <button class="cart-btn" onclick="addToCart(5)">Buy now</button>
+    </div>
+
+    
+</section>
+
+    <div class="heading1">
+    <h4>Basketball shoes</h4></div>
+ <section>
+        <div class="Basketball shoes" data-id="6" data-name="Trae_Young_3_Shoes_Turquoise_IF2115_01_standard"data-price="120.00">
+            <img src="/Trae_Young_3_Shoes_Turquoise_IF2115_01_standard.avif" height="250px">
+            <p>Trae Young 3<br><br>
+            RM120.00</p>
+            <button class="cart-btn" onclick="addToCart(6)">Buy now</button>
+        </div>
+
+        <div class="Basketball shoes"data-id="7" data-name="Harden_Volume_7_003_Shoes_Green_IF1138_01_standard"data-price="100.00">
+            <img src="Harden_Volume_7_003_Shoes_Green_IF1138_01_standard.avif" height="250px">
+            <p>Harden Volume 7 003 Shoes<br><br>
+            RM100.00</p>
+            <button class="cart-btn"onclick="addToCart(7)">Buy now</button>
+        </div>
+
+        <div class="Basketball shoes"data-id="8"data-name="Top_Ten_2010_Shoes_White_HR0099_01_standard"data-price="89.00">
+            <img src="/Top_Ten_2010_Shoes_White_HR0099_01_standard.avif" height="250px">
+            <p>Top Ten 2010 Shoes<br><br>
+            RM89.00</p>
+            <button class="cart-btn" onclick="addToCart(8)">Buy now</button>
+        </div>
+
+        <div class="Basketball shoes"data-id="9"data-name="D_Rose_Son_of_Chi_3_Shoes_Black_IG5559_01_standard"data-price="130.00">
+            <img src="/D_Rose_Son_of_Chi_3_Shoes_Black_IG5559_01_standard.avif" height="250px">
+            <p>D Rose Son Of CHI 3 Shoes<br><br>
+            RM130.00</p>
+            <button class="cart-btn"onclick="addToCart(9)">Buy now</button>
+        </div>
+
+        <div class="Basketball shoes"data-id="10"data-name="Ownthegame_Shoes_Black_H00471_01_standard"data-price="289.00">
+            <img src="/Ownthegame_Shoes_Black_H00471_01_standard.avif" height="250px">
+            <p>Ownthegame Shoes<br><br>
+            RM289.00</p>
+            <button class="cart-btn" onclick="addToCart(10)">Buy now</button>
+        </div>
+    </section>
+
+    <script>
+        const cart = [];
+
+        function addToCart(productId) {
+            const product = document.querySelector(`[data-id="${productId}"]`);
+            const productName = product.dataset.name;
+            const productPrice = parseFloat(product.dataset.price);
+
+            const item = cart.find(item => item.id === productId);
+
+            if (item) {
+                item.quantity++;
+            } else {
+                cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+            }
+
+            alert('Product added to cart!');
+            
+        }
+    </script>
+
+    
+
+    
+ 
+</body>
+</html>

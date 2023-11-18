@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Women's shoes</title>
+        <link rel="stylesheet" href="women.css">
+       
+        <style>
+            p{font-family: 'Courier New', Courier, monospace;
+        color: hotpink;}
+
+        h1{text-shadow: 2px 2px 5px pink;}
+        .cart-btn {
+            cursor: pointer;
+        }
+
+        body{background-color:antiquewhite ;}
+
+
+
+        </style>
+    </head>
+    <h1>Women's shoes</h1>
+    <h2><a href="sell product.html"target="_self">Home</a></h2>
+    
+    <table border="0" width="25%" align="center">
+        <tr>
+            <td align="center"><a href="men shoes.html"target="_self"> Men</a></td>
+            <td align="center"><a href="women shoes.html"target="_self">Women</a></td>
+            <td align="center"><a href="kid shoes.html"target="_self">Kid</a></td>
+        </tr></table>
+
+    <section>
+        <div class="shoes"data-id="1"data-name="ny90"data-price="34.00">
+            <img src="/ny90.webp"height="250px">
+            <p>Ny 90 Shoes Cloud<br><br>
+            RM34.00</p>
+            <button class="cart-btn"onclick="addToCart(1)">Buy now</button>
+        </div>
+
+        <div class="shoes"data-id="2"data-name="UltraBoost"data-price="58.14">
+            <img src="/ultra boost.webp" height="250px">
+            <p>Wmns UltraBoost Summer.Rdy<br><br>
+            RM58.14</p>
+            <button class="cart-btn"onclick="addToCart(2)">Buy now</button>
+        </div>
+
+        <div class="shoes"data-id="3"data-name="21404265_o"data-price="86.70">
+            <img src="/21404265_o.webp" height="250px">
+            <p>Women's Training Shoes<br><br>
+            RM86.70</p>
+            <button class="cart-btn"onclick="addToCart(3)">Buy now</button>
+        </div>
+
+        <div class="shoes"data-id="4"data-name="eq21-run-shoes"data-price="69.00">
+            <img src="/eq21-run-shoes.avif" height="250px" >
+            <p>Women's Running Shoes<br><br>
+            RM69.00</p>
+            <button class="cart-btn"onclick="addToCart(4)">Buy now</button>
+        </div>
+
+        <div class="shoes"data-id="5"data-name="NMD_V3_Shoes_White_HQ9116_01_standard"data-price="79.00">
+            <img src="/NMD_V3_Shoes_White_HQ9116_01_standard.avif"height="250px">
+            <p>NMD_V3 Shoes<br><br>
+            RM79.00</p>
+            <button class="cart-btn"onclick="addToCart(5)">Buy now</button>
+
+        </div>
+
+        <div class="shoes"data-id="6"data-name="Grand_Court_Cloudfoam_Lifestyle_Court_Comfort_Shoes_White_GW9214_01_standard"data-price="39.00">
+            <img src="Grand_Court_Cloudfoam_Lifestyle_Court_Comfort_Shoes_White_GW9214_01_standard.avif" height="250px" >
+            <p>Grand Court Cloudfoam Lifestyle Court Comfort Shoes<br><br>
+            RM39.00</p>
+            <button class="cart-btn"onclick="addToCart(6)">Buy now</button>
+        </div>
+        <div class="shoes" data-id="7"data-name="Adi2000_X_Shoes_White_HQ7151_01_standard"data-price="49.00">
+            <img src="Adi2000_X_Shoes_White_HQ7151_01_standard.avif" height="250px">
+            <p>ADI2000 X Shoes<br><br>
+            RM49.00</p>
+            <button class="cart-btn"onclick="addToCart(7)">Buy now</button>
+        </div>
+
+        <div class="shoes"data-id="8"data-name="adidas_by_Stella_McCartney_Court_Shoes_White_HQ8675_01_standard"data-price="59.00">
+            <img src="adidas_by_Stella_McCartney_Court_Shoes_White_HQ8675_01_standard.avif" height="250px">
+            <p>Abibas By Stella Mccartney Court Shoes<br><br>
+            RM59.00</p>
+            <button class="cart-btn"onclick="addToCart(8)">Buy now</button>
+
+        </div>
+
+
+    </section>
+    <script>
+        const cart = [];
+
+        function addToCart(productId) {
+            const product = document.querySelector(`[data-id="${productId}"]`);
+            const productName = product.dataset.name;
+            const productPrice = parseFloat(product.dataset.price);
+
+            const item = cart.find(item => item.id === productId);
+
+            if (item) {
+                item.quantity++;
+            } else {
+                cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+            }
+
+            alert('Product added to cart!');
+            
+        }
+        </script>
+
+
+
+</html>
