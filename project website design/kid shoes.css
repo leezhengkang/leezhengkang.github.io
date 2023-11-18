@@ -1,0 +1,19 @@
+section{
+    display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 20px;
+height: 120%;
+}
+
+
+.shoes{background-color:aqua;
+    border: 1px solid cornflowerblue;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    
+}
+
+table{font-family: 'Courier New', Courier, monospace;
+    font-size: 150%;}
