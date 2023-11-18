@@ -1,0 +1,48 @@
+body{
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+background-color: antiquewhite ;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table{font-family: 'Courier New', Courier, monospace;
+font-size: 150%;
+text-decoration: none;
+}
+
+.heading{text-align:left;
+text-shadow: 2px 2px 5px;
+font-size: 150%;}
+
+
+
+.best seller{background-color:#ddd;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+  } 
+  section{
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    height: 50%;}
+
+
+    .shoes-table{
+        text-decoration: none;}
+
+
+        .Basketball shoes{background-color:#ddd;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;}
+
+            .heading1{text-align:left;
+                text-shadow: 2px 2px 5px;
+                font-size: 150%;
+            }
+  

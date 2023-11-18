@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Men's Shoes</title>
+        <link rel="stylesheet" href="men shoes.css">
+        <style>
+            h1{font-family: 'Courier New', Courier, monospace;
+          text-shadow: 2px 2px 5px lightblue;}
+
+          .cart-btn {
+            cursor: pointer;
+        }
+
+        body{background-color:antiquewhite;}
+
+        p{color: blanchedalmond;}
+
+            
+        </style>
+
+        
+    </head>
+    <h1>Men's shoes</h1>
+    <h2><a href="sell product.html"target="_self">Home</a></h2>
+
+    
+    <table border="0" width="25%" align="center">
+      <tr>
+      
+          <td align="center"><a href="men shoes.html"target="_self"> Men</a></td>
+          <td align="center"><a href="women shoes.html"target="_self">Women</a></td>
+          <td align="center"><a href="kid shoes.html"target="_self">Kid</a></td>
+      </tr></table>
+
+    <section>
+        <div class="shoes"data-id="1"data-name="Duramo_10_Shoes_Black_GW8336_01_standard"data-price="26.00">
+    <img src="/Duramo_10_Shoes_Black_GW8336_01_standard.avif" height="250px">
+    <p>Duramo 10<br><br>
+        RM26.00   
+      </p>
+        <button class="cart-btn" onclick="addToCart(1)">Buy now</button>
+ 
+
+
+</div>
+
+<div class="shoes" data-id="2" data-name="Forum_Low_Shoes_White_FY7755_01_standard"data-price="49.00">
+   <img src="/Forum_Low_Shoes_White_FY7755_01_standard.avif" height="250px"> 
+   <p>Forum Low Shoes<br><br>
+        RM49.00</p>
+        <button class="cart-btn" onclick="addToCart(2)">Buy now</button>
+  </div> 
+
+  <div class="shoes"data-id="3"data-name="Samba_OG_Shoes_White_B75806_01_standard"data-price="56.00">
+    <img src="/Samba_OG_Shoes_White_B75806_01_standard.avif" height="250px">
+    <p>Samba OG Shoes<br><br>
+    RM56.00</p>
+    <button class="cart-btn"onclick="addToCart(3)">Buy now</button>
+  </div>
+
+  <div class="shoes"data-id="4"data-name="Superstar_Shoes_White_EG4958_01_standard"data-price="44.00">
+    <img src="/Superstar_Shoes_White_EG4958_01_standard.avif" height="250px">
+    <p>Superstar Shoes<br><br>
+    RM44.00</p>
+    <button class="cart-btn"onclick="addToCart(4)">Buy now</button>
+    
+  </div>
+
+  <div class="shoes"data-id="5"data-name="Campus_00s_Shoes_Blue_H03471_01_standard"data-price="49.00">
+    <img src="/Campus_00s_Shoes_Blue_H03471_01_standard.avif" height="250px">
+    <p>Campus 00s Shoes<br><br>
+    RM49.00</p>
+    <button class="cart-btn"onclick="addToCart(5)">Buy now</button>
+  </div>
+
+  <div class="shoes"data-id="6"data-name="Avryn_Shoes_Black_HP5969_01_standard"data-price="49.00">
+    <img src="/Avryn_Shoes_Black_HP5969_01_standard.avif" height="250px">
+    <p>Avryn Shoes<br><br>
+    RM59.00</p>
+    <button class="cart-btn"onclick="addToCart(6)">Buy now</button>
+  </div>
+
+  <div class="shoes"data-id="7"data-name="Tensaur_Sport_Training_Lace_Shoes_White_GW6422_01_standard"data-price="18.30">
+    <img src="/Tensaur_Sport_Training_Lace_Shoes_White_GW6422_01_standard.avif" height="250px">
+    <p>Tensaur Sport Training Lace Shoes<br><br>
+    RM18.30</p>
+    <button class="cart-btn"onclick="addToCart(7)">Buy now</button>
+  </div>
+
+  <div class="shoes"data-id="8"data-name="stan-smith-shoes"data-price="49.00">
+    <img src="/stan-smith-shoes.avif" height="250px">
+    <p>Stan Smith Shoes<br><br>
+    RM49.00</p>
+    <button class="cart-btn"onclick="addToCart(8)">Buy now
+    </button>
+  </div>
+</section>
+
+<script>
+  const cart = [];
+
+  function addToCart(productId) {
+      const product = document.querySelector(`[data-id="${productId}"]`);
+      const productName = product.dataset.name;
+      const productPrice = parseFloat(product.dataset.price);
+
+      const item = cart.find(item => item.id === productId);
+
+      if (item) {
+          item.quantity++;
+      } else {
+          cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+      }
+
+      alert('Product added to cart!');
+      
+  }
+</script>
+
+
+
+
+</html>
