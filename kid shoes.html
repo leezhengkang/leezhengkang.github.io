@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Kid's Shoes</title>
+        <link rel="stylesheet" href="kid shoes.css">
+        <style>
+            h1{font-family: 'Courier New', Courier, monospace;
+        text-shadow: 2px 2px 5px aqua;}
+        .cart-btn {
+            cursor: pointer;
+        }
+        p{color:midnightblue;}
+        body{background-color: antiquewhite;}
+
+            
+        </style>
+
+        
+    </head>
+    <h1>Kid's shoes</h1>
+    <h2><a href="sell product.html"target="_self">Home</a></h2>
+    
+    <table border="0" width="25%" align="center">
+        <tr>
+            <td align="center"><a href="men shoes.html"target="_self"> Men</a></td>
+            <td align="center"><a href="women shoes.html"target="_self">Women</a></td>
+            <td align="center"><a href="kid shoes.html"target="_self">Kid</a></td>
+        </tr></table>
+
+    <section>
+        <div class="shoes"data-id="1"data-name="Ultrabounce_Shoes_Kids_Black_HQ1294_01_standard"data-price="14.50">
+    <img src="/Ultrabounce_Shoes_Kids_Black_HQ1294_01_standard.avif" height="250px">
+    <p>Ultrabounce Shoes Kid<br><br>
+        RM14.50
+    </p>
+
+<button class="cart-btn"onclick="addToCart(1)">Buy now</button>
+</div>
+
+<div class="shoes"data-id="2"data-name="Monofit_Shoes_Kids_Black_ID9649_01_standard"data-price="19.00">
+   <img src="/Monofit_Shoes_Kids_Black_ID9649_01_standard.avif" height="250px"> 
+   <p>Monofit Shoes Kid<br><br>
+        RM19.00</p>
+        <button class="cart-btn"onclick="addToCart(2)">Buy now</button>
+  </div> 
+
+  <div class="shoes"data-id="3"data-name="adidas_FortaRun_x_Disney_Mickey_Mouse_Shoes_Kids_Black_IG7166_01_standard"data-price="13.40">
+    <img src="/adidas_FortaRun_x_Disney_Mickey_Mouse_Shoes_Kids_Black_IG7166_01_standard.avif" height="250px">
+    <p>Abibas FORTARUN X DISNEY MICKEY MOUSE SHOES KIDS<br><br>
+    RM13.40</p>
+    <button class="cart-btn"onclick="addToCart(3)">Buy now</button>
+  </div>
+
+  <div class="shoes"data-id="4" data-name="adidas_x_LEGOr_Tech_RNR_Elastic_Lace_and_Top_Strap_Shoes_Blue_HP5879_01_standard"data-price="25.30">
+    <img src="/adidas_x_LEGOr_Tech_RNR_Elastic_Lace_and_Top_Strap_Shoes_Blue_HP5879_01_standard.avif" height="250px">
+    <p>Abibas x LEGO Tech RNR Elastic Lace and Top Strap Shoes <br><br>
+    RM25.30</p>
+    <button class="cart-btn"onclick="addToCart(4)">Buy now</button>
+    
+  </div>
+
+  <div class="shoes"data-id="5"data-name="adidas_Superstar_x_LEGOr_Shoes_Kids_White_IF2911_01_standard"data-price="31.00">
+    <img src="/adidas_Superstar_x_LEGOr_Shoes_Kids_White_IF2911_01_standard.avif" height="250px">
+    <p>Abibas Superstar x LEGO Shoes Kid<br><br>
+    RM31.00</p>
+    <button class="cart-btn"onclick="addToCart(5)">Buy now</button>
+  </div>
+
+  <div class="shoes"data-id="6"data-name="adidas_Originals_x_Hello_Kitty_Stan_Smith_Shoes_Kids_White_ID7231_01_standard"data-price="31.00">
+    <img src="/adidas_Originals_x_Hello_Kitty_Stan_Smith_Shoes_Kids_White_ID7231_01_standard.avif" height="250px">
+    <p>Abibas Original x HELLO KITTY Stan Smith Shoes Kid<br><br>
+    RM31.00</p>
+    <button class="cart-btn"onclick="addToCart(6)">Buy now</button>
+  </div>
+
+  <div class="shoes"data-id="7"data-name="adidas_Sport_DNA_x_LEGOr_Shoes_Yellow_HQ1312_01_standard"data-price="30.30">
+    <img src="/adidas_Sport_DNA_x_LEGOr_Shoes_Yellow_HQ1312_01_standard.avif" height="250px">
+    <p>Abibas Sport DNA X LEGO Shoes<br><br>
+    RM30.30</p>
+    <button class="cart-btn"onclick="addToCart(7)">Buy now</button>
+  </div>
+
+  <div class="shoes"data-id="8"data-name="adidas_Originals_x_Disney_Mickey_Superstar_360_Shoes_Kids_White_ID9706_01_standard"data-price="91.40">
+    <img src="/adidas_Originals_x_Disney_Mickey_Superstar_360_Shoes_Kids_White_ID9706_01_standard.avif" height="250px">
+    <p>Abibas Originals X Disney Mickey Superstar 360 Shoes Kid<br><br>
+    RM91.40</p>
+    <button class="cart-btn"onclick="addToCart(8)">Buy now</button>
+  </div>
+</section>
+<script>
+  const cart = [];
+
+  function addToCart(productId) {
+      const product = document.querySelector(`[data-id="${productId}"]`);
+      const productName = product.dataset.name;
+      const productPrice = parseFloat(product.dataset.price);
+
+      const item = cart.find(item => item.id === productId);
+
+      if (item) {
+          item.quantity++;
+      } else {
+          cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+      }
+
+      alert('Product added to cart!');
+      
+  }
+  </script>
+
+
+
+
+</html>
