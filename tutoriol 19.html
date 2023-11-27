@@ -1,0 +1,39 @@
+<html><head><title>JavaScript</title>
+    <link rel=icon href=sunflower.jpg type=image/jpg>
+    <meta name=viewport content=width=device-width, initial-scale=1.0>
+    <title>Tutorial 19</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text"  id="favourite sport" placeholder="favourite sport"="Favourite Sport" required>
+        <input type="text"  id="favourite food"  placeholder="favourite food"="Favourite Food" required>
+        <button onclick="showmessage()">submit</button>
+
+    </form>
+</body>
+<script>
+    function showmessage(){
+        var favouriteSport = document.getElementById("favourite sport").value;
+        var favouriteFruit = document.getElementById("favourite food").value;
+
+        if(favouriteSport.trim()===""||favouriteFruit.trim()===""){
+            alert("Please fill in both favourite sport and favourite food fields.")
+        }
+        else{
+            alert("Submit complete")
+        }
+    }
+    var form = document.getElementById('form');
+    form.addEventListener('submit',function(event){
+        event.preventDefault();
+        showmessage();
+    });
+
+    
+
+    
+</script>
+
+
+
+</html>
