@@ -193,15 +193,24 @@ function keyPressed() {
     player.setDir(0, -1);
   } else if (key === 's' || key === 'S') {
     player.setDir(0, 1);
-  } else if (key === 'x' || key === 'X') {
+  } 
+}
+
+function mousePressed(){
+   if (mouseButton === LEFT ) {
     attacking = true;
   }
+
 }
 
 function keyReleased() {
   if (key === 'w'||key === 'a'||key === 's'||key === 'd') {
     player.setDir(0, 0);
-  } else if (key === 'x' || key === 'X') {
+  } 
+}
+
+function mouseReleased(){
+   if (mouseButton === LEFT) {
     attacking = false;
   }
 }
