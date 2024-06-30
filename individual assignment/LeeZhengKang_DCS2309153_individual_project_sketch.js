@@ -11,6 +11,7 @@ let enemyBullets = [];
 let score = 0;
 let attacking = false;
 let logo;
+let bgmplay=false;
 
 function preload(){
   avatarImage = loadImage('digdug-removebg-preview.png');
@@ -18,6 +19,7 @@ function preload(){
   monster2Image = loadImage('digdugmonster2-removebg-preview.png');
   rockImage = loadImage('Dig_Dug_rock.png');
   img = loadImage("crescendo-oglogo.png");
+  
 }
 
 function setup() {
@@ -28,11 +30,15 @@ function setup() {
   initializeRocks();
   player = new Player();
   initializeEnemies();
+  
 }
 
 function draw() {
   if (gameOver) {
     displayGameOver();
+   
+    
+    
     return;
   }
 
@@ -40,6 +46,8 @@ function draw() {
     displayWin();
     return;
   }
+  
+  
 
   background(200, 150, 100); // Base dirt color
   displayDirt();
@@ -58,6 +66,8 @@ function draw() {
   checkCollisions();
   displayScore();
 }
+
+
 
 function initializeDirt() {
   for (let i = 0; i < cols; i++) {
@@ -175,13 +185,13 @@ function displayBullets() {
 }
 
 function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
+  if (key === 'a' || key === 'A' ) {
     player.setDir(-1, 0);
-  } else if (keyCode === RIGHT_ARROW) {
+  } else if (key === 'd' || key === 'D') {
     player.setDir(1, 0);
-  } else if (keyCode === UP_ARROW) {
+  } else if (key === 'w' || key === 'W') {
     player.setDir(0, -1);
-  } else if (keyCode === DOWN_ARROW) {
+  } else if (key === 's' || key === 'S') {
     player.setDir(0, 1);
   } else if (key === 'x' || key === 'X') {
     attacking = true;
@@ -189,7 +199,7 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  if (keyCode === LEFT_ARROW || keyCode === RIGHT_ARROW || keyCode === UP_ARROW || keyCode === DOWN_ARROW) {
+  if (key === 'w'||key === 'a'||key === 's'||key === 'd') {
     player.setDir(0, 0);
   } else if (key === 'x' || key === 'X') {
     attacking = false;
